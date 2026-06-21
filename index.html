@@ -28,40 +28,40 @@
     </script>
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:#333;background:#faf8f5;padding:20px}
+        body{font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7;color:#374151;background:#faf8f5;padding:40px 20px}
         .container{max-width:1200px;margin:0 auto}
-        header{text-align:center;padding:40px 0 30px;border-bottom:2px solid #b8860b;margin-bottom:30px}
-        header h1{font-size:2.2rem;color:#1a1a1a}
-        header h1 span{color:#b8860b}
-        header p{color:#888;margin-top:8px;font-size:15px}
-        .site-logo{width:80px;height:80px;border-radius:50%;margin-bottom:10px;object-fit:cover;border:3px solid #b8860b}
+        header{text-align:center;padding:40px 0 30px;border-bottom:2px solid #d4af37;margin-bottom:30px}
+        header h1{font-size:2.5rem;color:#111827;letter-spacing:-0.025em}
+        header h1 span{color:#d4af37}
+        header p{color:#6b7280;margin-top:8px;font-size:15px}
+        .site-logo{width:80px;height:80px;border-radius:50%;margin-bottom:15px;object-fit:cover;border:3px solid #d4af37}
         .nav-links{margin-top:15px}
-        .nav-links a{color:#b8860b;text-decoration:none;margin:0 8px;font-size:14px}
+        .nav-links a{color:#d4af37;text-decoration:none;margin:0 8px;font-size:14px;font-weight:600}
         .nav-links a:hover{text-decoration:underline}
         .category{margin-bottom:40px}
-        .category h2{font-size:1.4rem;color:#1a1a1a;margin-bottom:15px;padding-bottom:8px;border-bottom:1px solid #eee;display:flex;align-items:center;gap:10px}
-        .category h2 .count{background:#b8860b;color:white;font-size:12px;padding:2px 8px;border-radius:10px}
-        .cat-head-link{color:#1a1a1a;text-decoration:none}
-        .cat-head-link:hover{color:#b8860b}
+        .category h2{font-size:1.4rem;color:#111827;margin-bottom:15px;padding-bottom:8px;border-bottom:1px solid #e5e7eb;display:flex;align-items:center;gap:10px}
+        .category h2 .count{background:#d4af37;color:white;font-size:12px;padding:2px 10px;border-radius:12px;font-weight:600}
+        .cat-head-link{color:#111827;text-decoration:none}
+        .cat-head-link:hover{color:#d4af37}
         .recipe-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:15px}
-        .recipe-card{background:white;border-radius:10px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 2px 8px rgba(0,0,0,.06);transition:transform .15s,box-shadow .15s}
-        .recipe-card:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.1)}
+        .recipe-card{background:white;border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 2px 8px rgba(0,0,0,.06);transition:transform .2s,box-shadow .2s}
+        .recipe-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.1)}
         .card-thumb{position:relative;padding-bottom:56%;background:#eee}
         .card-thumb img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}
         .card-thumb .duration{position:absolute;bottom:6px;right:6px;background:rgba(0,0,0,.8);color:white;font-size:11px;padding:2px 6px;border-radius:4px}
-        .card-body{padding:10px 12px 14px}
-        .card-body h3{font-size:13px;font-weight:600;line-height:1.4;margin-bottom:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-        .card-date{color:#999;font-size:11px}
-        .jump-nav{text-align:center;padding:10px 0 20px;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
-        .jump-nav a{background:white;border:1px solid #ddd;border-radius:20px;padding:5px 14px;font-size:13px;color:#555;text-decoration:none}
-        .jump-nav a:hover{border-color:#b8860b;color:#b8860b}
-        .footer{text-align:center;color:#999;font-size:13px;padding:30px 0;border-top:1px solid #eee;margin-top:40px}
-        .footer a{color:#b8860b;text-decoration:none}
+        .card-body{padding:12px 14px 16px}
+        .card-body h3{font-size:13px;font-weight:600;line-height:1.4;margin-bottom:4px;color:#374151;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+        .card-date{color:#9ca3af;font-size:11px}
+        .jump-nav{text-align:center;padding:10px 0 25px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+        .jump-nav a{background:white;border:1px solid #e5e7eb;border-radius:20px;padding:6px 16px;font-size:13px;color:#6b7280;text-decoration:none;transition:all .15s}
+        .jump-nav a:hover{border-color:#d4af37;color:#d4af37;background:#fffbf2}
+        .footer{text-align:center;color:#9ca3af;font-size:13px;padding:30px 0;border-top:1px solid #e5e7eb;margin-top:40px}
+        .footer a{color:#d4af37;text-decoration:none}
         .stats{display:flex;justify-content:center;gap:30px;margin:15px 0;flex-wrap:wrap}
         .stats div{text-align:center}
-        .stats div strong{display:block;font-size:1.5rem;color:#b8860b}
-        .stats div span{font-size:12px;color:#888}
-        @media(max-width:600px){header h1{font-size:1.6rem}.recipe-grid{grid-template-columns:repeat(2,1fr);gap:10px}.container{padding:0}body{padding:10px}}
+        .stats div strong{display:block;font-size:1.5rem;color:#d4af37}
+        .stats div span{font-size:12px;color:#9ca3af}
+        @media(max-width:600px){header h1{font-size:1.8rem}.recipe-grid{grid-template-columns:repeat(2,1fr);gap:10px}.container{padding:0}body{padding:10px}}
     </style>
 </head>
 <body>
